@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+.d-flex {
+    display: flex;
+    flex: 1 100%
+}
+
+.flex-container {
+    flex-wrap: wrap;
+    margin: auto 0;
+    border: 5px solid #007bff;
+}
+
+.d-flex-row {
+    flex-direction: row;
+    width: 100%;
+}
+
+.flex-item-left {
+    flex: 50%;
+}
+
+.flex-item-right {
+    flex: 50%;
+}
+
+header {
+    flex: 1 100%;
+    padding: 5px 5px;
+    background-color: rgba(251, 251, 251);
+}
+
+header section:hover {
+    background-color: rgb(241, 241, 241);
+    transition: ease-in;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+header section {}
+
+.content {
+    flex: 1 100%
+}
+
+.content ul {
+    flex: 1 100%
+}
+
+.content ul li {
+    flex: 1 100%;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    padding: 5px 5px;
+}
+
+.flex-items {
+    padding: 5px;
+    font-weight: bold;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-header {
+    color: rgb(56, 55, 55)
+}
+
+.text-primary {
+    color: #007bff!important;
+}
+
+.text-secondary {
+    color: #6c757d!important;
+}
+
+.text-success {
+    color: #28a745!important;
+}
+
+.text-danger {
+    color: #dc3545!important;
+}
+
+.p-right-10 {
+    padding-right: 10px !important;
+}
+
+.p-left-10 {
+    padding-right: 10px !important;
+}
+
+.v-align-center {
+    align-items: center;
+}
+
+.v-align-baseLine {
+    align-items: flex-end;
+}
+
+.currency::before {
+    content: '\0024';
+}
+
+.main-digit {
+    font-size: 20px;
+}
+
+.sub-digit {
+    font-size: 15px;
+}
+
+.up-arrow {
+    position: relative;
+}
+
+.up-arrow::before {
+    content: '^';
+    color: #007bff!important;
+    position: absolute;
+    left: 32px;
+}
+
+.down-arrow::before {
+    content: '^';
+    position: absolute;
+    transform: rotate(180deg);
+    left: 32px;
+    -webkit-transform: rotate(180deg);
+    color: #007bff!important;
+}
