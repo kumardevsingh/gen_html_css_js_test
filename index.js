@@ -40,10 +40,10 @@ let balance = {
 
 
 function getAccNumber(user = "", sortBy = "", sortDirection = "asc") {
-
+    //deep copy of orignal data to prevent any accedently changes. 
     let copyData = JSON.parse(JSON.stringify(acctData));
     let _tempArr = [];
-
+    //filter by user
     if (user) {
         _tempArr = copyData.filter((e) => {
             return user.trim().toLocaleLowerCase() === e.user.trim().toLocaleLowerCase();
@@ -51,11 +51,13 @@ function getAccNumber(user = "", sortBy = "", sortDirection = "asc") {
     } else {
         _tempArr = copyData;
     }
-
+    //if we get empty array after filter user
     if (!_tempArr.length) {
         alert("No data found for sorting!!");
         return copyData;
     }
+
+    //sort data on basis of accNum or balance
     if (sortBy) {
         _tempArr.sort((a, b) => {
             if (sortDirection === "asc") {
@@ -83,5 +85,5 @@ function getAccNumber(user = "", sortBy = "", sortDirection = "asc") {
 }
 
 
-console.log(getAccNumber("", "acctNum", "asc"));
+console.log(getAccNumber("bob", "acctNum", "asc"));
 

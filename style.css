@@ -11,13 +11,13 @@
 
 .d-flex {
     display: flex;
-    flex: 1 100%
 }
 
 .flex-container {
     flex-wrap: wrap;
-    margin: auto 0;
+    width: 25%;
     border: 5px solid #007bff;
+    margin: 0 auto;
 }
 
 .d-flex-row {
@@ -82,7 +82,7 @@ header section:hover {
 }
 
 .text-header {
-    color: rgb(56, 55, 55)
+    color: rgb(56, 55, 55);
 }
 
 .text-primary {
@@ -147,4 +147,20 @@ header section:hover {
     left: 32px;
     -webkit-transform: rotate(180deg);
     color: #007bff!important;
+}
+
+footer {
+    display: block;
+    padding: 10px 0px;
+    flex: 1 100%;
+    text-align: center;
+}
+
+footer .footer-content {
+    padding: 10px 0px;
+    font-weight: bold
+}
+
+footer .footer-content .loadMore {
+    cursor: pointer;
 }
